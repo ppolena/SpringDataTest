@@ -3,7 +3,6 @@ package main.java.SpringDataTest;
 import lombok.Data;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Data
 @Entity
@@ -21,8 +20,6 @@ public class Car {
 
     private Condition condition;
 
-    //@JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "owner_id")
     private Person owner;
 }

@@ -17,6 +17,6 @@ public class Person {
 
     private String telnum;
 
-    @OneToMany(mappedBy="owner")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private List<Car> ownedCars;
 }
