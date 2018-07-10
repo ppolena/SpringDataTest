@@ -21,5 +21,6 @@ public class Car {
     private Condition condition;
 
     @ManyToOne
+    @JoinColumn(name = "owner")
     private Person owner;
 }

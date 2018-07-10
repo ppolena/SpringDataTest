@@ -17,6 +17,6 @@ public class Person {
 
     private String telnum;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner", fetch=FetchType.EAGER)
     private List<Car> ownedCars;
 }
